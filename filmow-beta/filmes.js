@@ -124,7 +124,7 @@ let filmes = [
         title: 'Parasita',
         year: '2019',
         genre: 'Drama, Comédia, Suspense',
-        poster: 'https://media.fstatic.com/cJWrR1YAxH7jfPOv9fQZdEecp-w=/322x478/smart/filters:format(webp)/media/movies/covers/2016/09/hacksaw_ridge_ver2_xxlg.jpg'
+        poster: 'https://media.fstatic.com/ngnrCjt6vbPYYBNH2c4KMkRwmoE=/322x478/smart/filters:format(webp)/media/movies/covers/2019/08/x23Fqkt00uqV2TzfSiB60hrc3HY.jpg'
     },
 
     
