@@ -74,6 +74,7 @@ li {
 
 ul :hover {
     background-color: #5f5f5f;
+    transition: 0.5s;
 }
 
 main {
@@ -237,27 +238,12 @@ height: auto;
 }
 
 #add-button {
-    /* display: flex; */
-    width: 10rem;
+    width: 14rem;
     height: 3rem;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    /* margin-left: 4rem; */
-    /* margin-right: 1rem; */
-}
-
-#rmv-button {
-    /* display: flex; */
-    width: 10rem;
-    height: 3rem;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    margin-left: 1rem;
-    /* margin-right: 1rem; */
 }
 
 #rmv-button {
@@ -279,4 +265,46 @@ height: auto;
     cursor: pointer;
     /* color: #ff0000; */
     font-size: 20px;
+}
+
+#add-dialog {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #ddd;
+    padding: 2rem 4rem 2rem 4rem;
+    border-style:solid;
+    border-color:antiquewhite;
+    margin-top: 22rem;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+#add-form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 15rem;
+    background-color:rgba(250, 235, 215, 0.534);
 }
