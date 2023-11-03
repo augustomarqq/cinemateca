@@ -62,6 +62,7 @@ menuFilmes.addEventListener("click", function(e) {
     // rmvButton.classList.add('exibir-conteudo')
     welcomeMsg.classList.remove('exibir-conteudo')
     welcomeMsg.classList.add('esconder-conteudo')
+    closeDialog.className = 'filmes'
     seriesContent.innerHTML = ""
     animesContent.innerHTML = ""
 
@@ -100,6 +101,7 @@ menuSeries.addEventListener("click", function(e) {
     // rmvButton.classList.add('exibir-conteudo')
     welcomeMsg.classList.remove('exibir-conteudo')
     welcomeMsg.classList.add('esconder-conteudo')
+    closeDialog.className = 'series'
     filmesContent.innerHTML = ""
     animesContent.innerHTML = ""
 
@@ -139,6 +141,7 @@ menuAnimes.addEventListener("click", function(e) {
     // rmvButton.classList.add('exibir-conteudo')
     welcomeMsg.classList.remove('exibir-conteudo')
     welcomeMsg.classList.add('esconder-conteudo')
+    closeDialog.className = 'animes'
     filmesContent.innerHTML = ""
     seriesContent.innerHTML = ""
 
@@ -173,10 +176,20 @@ const addForm = document.getElementById('add-form')
 
 addButton.addEventListener('click', () => {
     addDialog.showModal();
+    filmesContent.innerHTML = ""
+    seriesContent.innerHTML = ""
+    animesContent.innerHTML = ""
 });
 
 closeDialog.addEventListener('click', () => {
-    addDialog.close();
+    addDialog.close()
+
+    if (closeDialog.className === "filmes")
+        renderizarFilmes()
+    else if (closeDialog.className === "series")
+        renderizarSeries()
+    else if (closeDialog.className === "animes")
+        renderizarAnimes()
 });
 
 addForm.addEventListener('submit', (e) => {
