@@ -1,18 +1,14 @@
 html {
-    background-color: black;
+    background-color: transparent;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    /* width: 100vh; */
+    /* width: 100%; */
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
+    background-color: antiquewhite;
 }
 
 nav {
@@ -21,21 +17,47 @@ nav {
     background-color:#404040;
 }
 
+#modo-buttons {
+    margin-left: auto;
+    padding: 1rem;
+}
+
+#modo-claro,
+#modo-escuro {
+    padding: 8px 12px;
+    border: 1px solid #404040;
+    background-color: transparent;
+    color: #404040;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 20px;
+}
+
+#modo-claro:hover,
+#modo-escuro:hover {
+    background-color: #404040;
+    color: white;
+}
+
 header {
     background-color: #1b1b1b;
     display: flex;
+    flex-direction: column;
     justify-content:  center;
     align-items: center;
-    margin-block-end: 0;
+    /* margin-block-end: 0; */
 }
 
 header p {
     color: white;
     display: flex;
-    padding: 1.5rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
     font-family:'Courier New', Courier, monospace;
     font-weight: 400;
     font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 i {
@@ -68,7 +90,7 @@ li {
     color: white;
     padding: 1.5rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     font-weight: 700;
 }
 
@@ -80,13 +102,13 @@ ul :hover {
 main {
     display: flex;
     flex-direction: column;
-    background-color:black;
+    /* background-color:black; */
     height: auto;
 }
 
 #welcome {
     /* display: flex; */
-    color: white;
+    color: black;
     justify-content: center;
     margin-top: 20rem;
 }
