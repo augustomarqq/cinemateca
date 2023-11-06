@@ -1,3 +1,13 @@
+document.getElementById('modo-claro').addEventListener('click', function() {
+    document.body.style.backgroundColor = 'antiquewhite'
+    welcomeMsg.style.color = 'black'
+});
+
+document.getElementById('modo-escuro').addEventListener('click', function() {
+    document.body.style.backgroundColor = '#080808'
+    welcomeMsg.style.color = 'white'
+});
+
 let menuFilmes = document.getElementById("menu-filmes")
 let filmesContent = document.getElementById("filmes-content")
 let liFilmes = document.getElementById("li-filmes")
@@ -199,6 +209,11 @@ addForm.addEventListener('submit', (e) => {
     const year = document.getElementById('year').value;
     const genre = document.getElementById('genre').value;
     const poster = document.getElementById('poster').value;
+
+    if (!poster.toLowerCase().endsWith('.jpg') && !poster.toLowerCase().endsWith('.jpeg') && !poster.toLowerCase().endsWith('.png')) {
+        alert('A URL do poster deve ser um link para uma imagem JPG, JPEG ou PNG.');
+        return;
+    }
 
     if (addButton.textContent === "Adicionar novo filme") {
         const newMovie = {
